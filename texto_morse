@@ -1,0 +1,64 @@
+package morsa;
+
+import java.util.Scanner;
+
+
+public class Texto_Morse {
+ public static void main(String[] args) {
+  Scanner entrada = new Scanner(System.in);
+   
+  String morse[]= new String[91];
+   
+  morse[48]="-----";//0
+  morse[49]=".----";
+  morse[50]="..---";
+  morse[51]="...--";
+  morse[52]="....-";
+  morse[53]=".....";
+  morse[54]="-....";
+  morse[55]="--...";
+  morse[56]="---..";
+  morse[57]="----.";//9
+   
+  morse[65]=".-";// 65=A
+  morse[66]="-...";
+  morse[67]="-.-.";
+  morse[68]="-..";
+  morse[69]=".";
+  morse[70]="..-.";
+  morse[71]="--.";
+  morse[72]="....";
+  morse[73]=".."; //i
+  morse[74]=".---";
+  morse[75]="-.-";
+  morse[76]=".-..";
+  morse[77]="--";
+  morse[78]="-.";
+  morse[79]="---";
+  morse[80]=".--.";
+  morse[81]="--.-";
+  morse[82]=".-.";
+  morse[83]="...";
+  morse[84]="-";
+  morse[85]="..-";
+  morse[86]="...-";
+  morse[87]=".--";
+  morse[88]="-..-";
+  morse[89]="-.--";
+  morse[90]="--..";// 90=Z
+  morse[32]="  "; //Espacio 
+  
+  System.out.println("INTRODUCE UNA PALABRA O NUMERO ");
+  String palabra=entrada.nextLine();
+   
+  palabra=palabra.toUpperCase();
+  char frase[]=palabra.toCharArray();
+   
+  for(int i=0;i<(frase.length);i++){
+   int indice=(int)frase[i];
+   System.out.print(morse[indice]+"  ");
+  }
+  
+ }
+ 
+}
